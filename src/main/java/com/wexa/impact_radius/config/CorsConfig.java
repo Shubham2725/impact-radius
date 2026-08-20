@@ -14,10 +14,9 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("https://impact-radius.vercel.app")
-                        .allowedOrigins("http://localhost:5173")
-                        .allowedOrigins("https://impact-radius-xxxx.vercel.app")
-                        .allowedOrigins("https://impact-radius-hy2vp00a7-impact-radius-team.vercel.app")
+                        .allowedOrigins(
+                            "https://impact-radius.vercel.app",
+                            "http://localhost:5173")
                         .allowedMethods("GET", "POST");
             }
         };
